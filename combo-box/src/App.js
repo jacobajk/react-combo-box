@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SelectComponent from "./SelectComponent.js";
+import SelectComponent from "./Components/SelectComponent.js";
 import "./styles.css";
 
 const options = [
