@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import SelectComponent from "./SelectComponent.js";
+import "./styles.css";
+
+const options = [
+  { key: 1, value: "Apple" },
+  { key: 2, value: "Banana" },
+  { key: 3, value: "Carrot" },
+  { key: 4, value: "Durian" },
+];
 
 function App() {
+  const [selectedOption, setSelectedOption] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Custom Dropdown</h1>
+      <SelectComponent
+        options={options}
+        onChange={(item) => setSelectedOption(item)}
+        selectedKey={selectedOption}
+        placeholder={"type to search"}
+      />
+      <p>selected option: {selectedOption}</p>
     </div>
   );
 }
