@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Custom Dropdown</h1>
+      <h1>Custom Combo Box</h1>
       <SelectComponent
         options={options}
         onChange={(item) => setSelectedOption(item)}
