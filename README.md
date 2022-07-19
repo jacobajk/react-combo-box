@@ -134,7 +134,7 @@ export default withClickOutside(SelectComponent);
 
 ```
 
-### withOutsideClick.js
+## withOutsideClick.js
 
 ```
 import React, { useState, useRef, useEffect } from "react";
